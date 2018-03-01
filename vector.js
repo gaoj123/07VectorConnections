@@ -36,4 +36,14 @@ var draw=function(e){
     }
 };
 
+var clear=function(e){
+    while(slate.hasChildNodes()){
+	slate.removeChild(slate.childNodes[0]);
+    }
+    nowX=0;
+    nowY=0;
+    started=false;
+}
+
 slate.addEventListener("click",draw);
+clearButton.addEventListener("click",clear);
